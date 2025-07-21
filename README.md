@@ -1,5 +1,16 @@
 # ShortPathQA
 
+**ShortPathQA** is the *first* QA benchmark that pairs natural-language questions with **pre-computed shortest-path subgraphs from Wikidata**, giving researchers a plug-and-play test bed for *controllable fusion* of **large language models (LLMs) and knowledge graphs (KGs)**.  
+
+Unlike existing KGQA datasets, ShortPathQA removes the heavy lifting of entity linking and path-finding: every sample already contains the ground-truth subgraph that connects the question entities to each answer candidate. This standardized setup lets you focus on **how** your model reasons over graph structure instead of **how** it retrieves it, making results directly comparable across studies.
+
+Key points  
+- **12 526 questions** (Mintaka split + 350 hand-curated tough cases) with **143 061 question–candidate pairs** and fixed subgraphs  
+- Supports binary classification “Is candidate $$c$$ the right answer for question $$q$$?”—perfect for rapid prototyping, fine-tuning or in-context prompting
+- Baseline experiments show that *state-of-the-art LLMs struggle to use graph information without dedicated prompts or fine-tuning*, underscoring the need for new KG-aware methods
+- Apache-2.0 licensed: clone, cite, and build your next KG-LLM idea in minutes
+
+Use ShortPathQA to benchmark prompting strategies, graph encoders, RAG pipelines or any approach that aims to teach LLMs **to read and reason over graphs**.
 
 ### Subgraphs Extraction
 
